@@ -3,10 +3,10 @@ NOTES:
 
 * ADD: Performs addition on two operands.
 * SUB: Subtracts the second operand from the first.
-* MUL: Unsigned multiplication of two operands. \ Multiplication
-* IMUL: Signed version of MUL.					/
-* DIV: Unsigned division of two operands.		\ Division
-* IDIV: Signed version of DIV.					/
+* MUL: Unsigned multiplication of two operands.
+* IMUL: Signed version of MUL.
+* DIV: Unsigned division of two operands.
+* IDIV: Signed version of DIV.	
 * INC: Increment (add 1) an operand.
 * DEC: Decrement (subtract 1) an operand.
 * NEG: Negates an operand.
