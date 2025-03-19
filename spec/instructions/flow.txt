@@ -1,0 +1,11 @@
+NOTES:
+  * A "J" prefixed will normally mean that the instruction jumps, conditionally or not.
+
+* JMP: Unconditional jump to label/adress.
+* JE/JZ: Jump if equal/Jump if zero. Jump if zero flag is set.
+* JNE/JNZ: Jump if not equal/Jump if not zero. Jump if zero flag is clear.
+* JC: Jump if carry flag is set.
+* JNC: Jump if carry flag is clear.
+* JO: Jump if overflow flag is set.
+* JNO: Jump if overflow flag is clear.
+

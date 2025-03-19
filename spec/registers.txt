@@ -1,0 +1,35 @@
+NOTE: Based on Intel 8086 registers
+  src: https://en.wikipedia.org/wiki/Intel_8086#Registers_and_instruction
+
+NOTE: Every main register contains high and low 8-bit registers
+* AX --> Primary
+  * AL, AH
+* BX --> Base
+  * BL, BH
+* CX --> Counter	
+  * CL, CH 
+* DX --> Extended access
+  * DL, DH
+
+* SI --> Source Index
+* DI --> Destination Index
+* BP --> Base Pointer
+* SP --> Stack Pointer 
+
+* IP --> Instruction Pointer (Program counter)
+
+* CS --> Code Segment
+* DS --> Data Segment
+* ES --> Extra Segment
+* SS --> Stack Segment
+
+* Status register (flags):
+  * O --> Overflow flag
+  * D --> Direction flag
+  * I --> Interrupt flag
+  * T --> Trap flag
+  * S --> Negative/Sign flag
+  * Z --> Zero flag
+  * A --> Half-carry flag
+  * P --> Parity flag
+  * C --> Carry flag

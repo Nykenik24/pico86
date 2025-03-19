@@ -1,0 +1,9 @@
+* AND: Logical AND
+* OR: Logical OR
+* XOR: Logical XOR
+* NOT: Logical NOT
+* SHL: Shift left. Multiplies by 2.
+* SHR: Shift right. Divides by 2.
+* SAR: Arithmetic Shift Right. Shifts to the right, preserving the sign bit.
+* ROL: Rotate Left.
+* ROR: Rotate Right.
