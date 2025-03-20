@@ -2,6 +2,9 @@ NOTE: Based on Intel 8086 registers
   src: https://en.wikipedia.org/wiki/Intel_8086#Registers_and_instruction
 
 NOTE: Every main register contains high and low 8-bit registers
+
+
+- Main register's purpose are general storing of quick-access data, like operands. Every main register consists of two single-byte registers, (REGISTER)L(ow) and (REGISTER)H(igh) e.g. AL(ow), AH(igh).
 * Main registers
   * AX --> Primary
 	* AL, AH
@@ -12,27 +15,38 @@ NOTE: Every main register contains high and low 8-bit registers
   * DX --> Extended access
 	* DL, DH
 
+- Index registers show positional information, such as where the last element of the stack currently is.
 * Index registers
   * SI --> Source Index
   * DI --> Destination Index
   * BP --> Base Pointer
   * SP --> Stack Pointer 
 
+- The instruction pointer shows where in the instruction stack the program is currently in.
 * IP --> Instruction Pointer (Program counter)
 
+- Segment registers store the starting points of each memory segment. To know more about memory segments, see "memory/structure.txt".
+- To calculate the physical adress of a memory segment: "physical_adress = (segment_register * 16) + offset", so per example the sixth adress in the code segment would be "(code_segment * 16) + 6".
 * Segment registers
   * CS --> Code Segment
   * DS --> Data Segment
   * ES --> Extra Segment
   * SS --> Stack Segment
 
+- The status register shows the currently active flags. This is useful to store information such as comparation results, equality results, etc.
+- It fills a two whole bytes (16 bits), with 1 byte per flag and 
+- An example would be the "JNZ" instruction, that jumps if the zero flag (Z/ZF) is NOT set.
 * Status register (flags):
-  * O --> Overflow flag
-  * D --> Direction flag
-  * I --> Interrupt flag
-  * T --> Trap flag
-  * S --> Negative/Sign flag
-  * Z --> Zero flag
-  * A --> Half-carry flag
-  * P --> Parity flag
-  * C --> Carry flag
+  * bit 15-12: None
+  * bit 11: OF --> Overflow flag
+  * bit 10: DF --> Direction flag
+  * bit 9: IF --> Interrupt flag
+  * bit 8: TF --> Trap flag
+  * bit 7: SF --> Negative/Sign flag
+  * bit 6: ZF --> Zero flag
+  * bit 5: None
+  * bit 4: AF --> Half-carry flag
+  * bit 3: None
+  * bit 2: PF --> Parity flag
+  * bit 1: None
+  * bit 0: CF --> Carry flag

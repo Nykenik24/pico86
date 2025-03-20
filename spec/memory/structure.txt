@@ -1,0 +1,7 @@
+Memory in the Pico86 uses this memory structure:
+* Memory: `uint8_t[0xFFFF]`, where `0xFFFF` is 1MB.
+* CS: uint16_t --> Adress to code segment
+* DS: uint16_t --> Adress to data segment
+* ES: uint16_t --> Adress to extra segment
+* SS: uint16_t --> Adress to stack segment
+Each segment has a size of `0x1000` (64KB)
