@@ -13,7 +13,7 @@ Pico86 is currently **Work In Progress**, here's a small roadmap:
     - [ ] Logical instructions (AND, OR, XOR...)
     - [ ] Arithmetic instructions (ADD, SUB, MUL...)
     - [ ] Flow instructions (JMP, JNZ, JZ...)
-- [ ] Execution pipeline
+- [ ] Execution process
     - [ ] Fetch
     - [ ] Decode
     - [ ] Fetch Operands
