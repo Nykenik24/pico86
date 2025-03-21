@@ -1,0 +1,20 @@
+====================
+Segmentation
+====================
+Memory segmentation[^1] is a technique where four 16-bit segment registers are used to allow the Pico86 to access 1MB of memory in an unusual way. This technique was also used in the 8086.
+
+The technique consists on rather than concatenating the segment register with the address register, as in most processors whose address space exceeds their register size, the Pico86 shifts the 16-bit segment four bits left before adding it to the 16-bit offset, therefore producing a 32-bit external physical address from the 32-bit segment:offset pair.
+
+====================
+Segments
+====================
+The Pico86 has 4 total segments:
+* Code segment, at `0x0000`.
+* Data segment, at `0x10000`.
+* Extra segment, at `0x20000`.
+* Stack segment, at `0x30000`.
+
+
+--------------------
+1: Wikipedia: https://en.wikipedia.org/wiki/Intel_8086#Segmentation
+

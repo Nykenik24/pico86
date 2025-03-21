@@ -1,0 +1,7 @@
+=============
+Flags
+=============
+# src: https://en.wikipedia.org/wiki/Flag_(programming)
+Flag can refer to one or more bits that are used to store a binary value or a Boolean variable for signaling special code conditions.
+
+In the case of the Pico86, flags store useful informations as booleans, where `0` is false and `1` is true, that can serve to store logical instruction results, such as `AND`/`OR`/`XOR`/etc.
