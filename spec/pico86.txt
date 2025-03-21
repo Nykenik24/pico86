@@ -1,0 +1,11 @@
+PICO86 SPEC
+===========
+Author: Nykenik (A.K.A Nykenik24)
+
+The Pico86 is a virtual 16-bit CPU made in C which emulates the early x86 CPUs, such as the 8086 (main inspiration). 
+
+It's main purpose was learning how to create a virtual CPU, emulate x86 and manage memory.
+
+The project is licensed under the MIT license, so you can modify, distribute and sell it as long as you give credit to its original author, Nykenik.
+
+
