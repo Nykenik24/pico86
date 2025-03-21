@@ -1,52 +1,73 @@
-NOTE: Based on Intel 8086 registers
-  src: https://en.wikipedia.org/wiki/Intel_8086#Registers_and_instruction
-
-NOTE: Every main register contains high and low 8-bit registers
+NOTE: Based on Intel 8086 registers  
+Source: https://en.wikipedia.org/wiki/Intel_8086#Registers_and_instruction
 
 
-- Main register's purpose are general storing of quick-access data, like operands. Every main register consists of two single-byte registers, (REGISTER)L(ow) and (REGISTER)H(igh) e.g. AL(ow), AH(igh).
-* Main registers
-  * AX --> Primary
-	* AL, AH
-  * BX --> Base
-	* BL, BH
-  * CX --> Counter	
-	* CL, CH 
-  * DX --> Extended access
-	* DL, DH
+====================
+Main Registers
+====================  
+Main registers are used for general storage of quick-access data (like operands).  
+Each consists of two 8-bit registers: (REGISTER)L(ow) and (REGISTER)H(igh) (e.g., AL(ow), AH(igh)).
 
-- Index registers show positional information, such as where the last element of the stack currently is.
-* Index registers
-  * SI --> Source Index
-  * DI --> Destination Index
-  * BP --> Base Pointer
-  * SP --> Stack Pointer 
+* **AX** → Primary  
+  * AL, AH  
+* **BX** → Base  
+  * BL, BH  
+* **CX** → Counter  
+  * CL, CH  
+* **DX** → Extended access  
+  * DL, DH  
 
-- The instruction pointer shows where in the instruction stack the program is currently in.
-* IP --> Instruction Pointer (Program counter)
+====================
+Index Registers
+====================  
+Index registers store positional information, such as the current position of the stack.
 
-- Segment registers store the starting points of each memory segment. To know more about memory segments, see "memory/structure.txt".
-- To calculate the physical adress of a memory segment: "physical_adress = (segment_register * 16) + offset", so per example the sixth adress in the code segment would be "(code_segment * 16) + 6".
-* Segment registers
-  * CS --> Code Segment
-  * DS --> Data Segment
-  * ES --> Extra Segment
-  * SS --> Stack Segment
+* **SI** → Source Index  
+* **DI** → Destination Index  
+* **BP** → Base Pointer  
+* **SP** → Stack Pointer  
 
-- The status register shows the currently active flags. This is useful to store information such as comparation results, equality results, etc.
-- It fills a two whole bytes (16 bits), with 1 byte per flag and 
-- An example would be the "JNZ" instruction, that jumps if the zero flag (Z/ZF) is NOT set.
-* Status register (flags):
-  * bit 15-12: None
-  * bit 11: OF --> Overflow flag
-  * bit 10: DF --> Direction flag
-  * bit 9: IF --> Interrupt flag
-  * bit 8: TF --> Trap flag
-  * bit 7: SF --> Negative/Sign flag
-  * bit 6: ZF --> Zero flag
-  * bit 5: None
-  * bit 4: AF --> Half-carry flag
-  * bit 3: None
-  * bit 2: PF --> Parity flag
-  * bit 1: None
-  * bit 0: CF --> Carry flag
+====================
+Instruction Pointer
+====================  
+The instruction pointer shows the current position in the instruction stream.
+
+* **IP** → Instruction Pointer (Program counter)
+
+====================
+Segment Registers
+====================  
+Segment registers store the starting points of each memory segment.  
+To calculate the **physical address** of a memory segment:  
+`physical_address = (segment_register * 16) + offset`  
+For example, the sixth address in the code segment would be:  
+`(CS * 16) + 6`.
+
+* **CS** → Code Segment  
+* **DS** → Data Segment  
+* **ES** → Extra Segment  
+* **SS** → Stack Segment  
+
+For more information on memory segments, see "memory/segments.txt".
+
+====================
+Status Register (Flags)
+====================  
+The status register holds the active flags, useful for storing information like comparison and equality results.  
+It is 16 bits wide, with one byte per flag.  
+For detailed flag explanations, see "flags.txt".
+
+* **Bits 15-12**: None  
+* **Bit 11**: **OF** → Overflow flag  
+* **Bit 10**: **DF** → Direction flag  
+* **Bit 9**: **IF** → Interrupt flag  
+* **Bit 8**: **TF** → Trap flag  
+* **Bit 7**: **SF** → Negative/Sign flag  
+* **Bit 6**: **ZF** → Zero flag  
+* **Bit 5**: None  
+* **Bit 4**: **AF** → Half-carry flag  
+* **Bit 3**: None  
+* **Bit 2**: **PF** → Parity flag  
+* **Bit 1**: None  
+* **Bit 0**: **CF** → Carry flag  
+

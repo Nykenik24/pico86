@@ -1,7 +1,33 @@
-Memory in the Pico86 uses this memory structure:
-* Memory: `uint8_t[0xFFFF]`, where `0xFFFF` is 1MB.
-* CS: uint16_t --> Adress to code segment
-* DS: uint16_t --> Adress to data segment
-* ES: uint16_t --> Adress to extra segment
-* SS: uint16_t --> Adress to stack segment
-Each segment has a size of `0x1000` (64KB)
+====================
+Data storing
+====================
+* To store a byte (8 bits), an `uint8_t` is used.
+* To store pretty much everything else, especially adresses, an `uint16_t` is used.
+
+====================
+Memory Structure
+====================  
+Memory in the Pico86 uses the following structure:
+
+* **Memory**: `uint8_t[0x100000]` (1MB)  
+  This is the total memory available, spanning from address `0x0000` to `0x100000`.
+
+* **CS** → Code Segment: `uint16_t`  
+  Address to the code segment.
+
+* **DS** → Data Segment: `uint16_t`  
+  Address to the data segment.
+
+* **ES** → Extra Segment: `uint16_t`  
+  Address to the extra segment.
+
+* **SS** → Stack Segment: `uint16_t`  
+  Address to the stack segment.
+
+For more information on memory segments, see "memory/segments.txt".
+
+====================
+Segment Size
+====================  
+Each segment has a size of `0x10000` (64KB).
+
