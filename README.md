@@ -3,6 +3,7 @@ Virtual 16-bit CPU made in C that emulates x86.
 
 ## W.I.P
 Pico86 is currently **Work In Progress**, here's a small roadmap:
+- [x] Spec
 - [ ] CPU main definition
 - [ ] Memory management and utilities
     - [ ] Memory initialization
