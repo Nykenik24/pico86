@@ -1,0 +1,128 @@
+============
+Arithmetic Instructions
+============
+
+* ADD: "ADD dst, src"
+    - Arguments: dst (destination), src (source)
+    - Description: Adds src to dst and stores the result in dst.
+    - Opcode: 0x0
+
+* SUB: "SUB dst, src"
+    - Arguments: dst (destination), src (source)
+    - Description: Subtracts src from dst and stores the result in dst.
+    - Opcode: 0x1
+
+* MUL: "MUL dst, src"
+    - Arguments: dst (destination), src (source)
+    - Description: Multiplies dst by src and stores the result in dst.
+    - Opcode: 0x2
+
+* DIV: "DIV dst, src"
+    - Arguments: dst (destination), src (source)
+    - Description: Divides dst by src and stores the quotient in dst.
+    - Opcode: 0x3
+
+============
+Logical Instructions
+============
+
+* AND: "AND dst, src"
+    - Arguments: dst (destination), src (source)
+    - Description: Performs bitwise AND between dst and src, storing the result in dst.
+    - Opcode: 0x20
+
+* OR: "OR dst, src"
+    - Arguments: dst (destination), src (source)
+    - Description: Performs bitwise OR between dst and src, storing the result in dst.
+    - Opcode: 0x21
+
+* XOR: "XOR dst, src"
+    - Arguments: dst (destination), src (source)
+    - Description: Performs bitwise XOR between dst and src, storing the result in dst.
+    - Opcode: 0x22
+
+* NOT: "NOT dst"
+    - Arguments: dst (destination)
+    - Description: Performs bitwise NOT on dst and stores the result in dst.
+    - Opcode: 0x23
+
+============
+Flow Control Instructions
+============
+
+* JMP: "JMP addr"
+    - Arguments: addr (address)
+    - Description: Jumps to the specified memory address.
+    - Opcode: 0x40
+
+* JZ: "JZ addr"
+    - Arguments: addr (address)
+    - Description: Jumps to the specified address if the zero flag is set.
+    - Opcode: 0x41
+
+* JNZ: "JNZ addr"
+    - Arguments: addr (address)
+    - Description: Jumps to the specified address if the zero flag is not set.
+    - Opcode: 0x42
+
+* CALL: "CALL addr"
+    - Arguments: addr (address)
+    - Description: Calls a subroutine at the specified address.
+    - Opcode: 0x43
+
+* RET: "RET"
+    - Arguments: None
+    - Description: Returns from a subroutine.
+    - Opcode: 0x44
+
+============
+Data Movement Instructions
+============
+
+* MOV: "MOV dst, src"
+    - Arguments: dst (destination), src (source)
+    - Description: Moves data from src to dst.
+    - Opcode: 0x60
+
+* PUSH: "PUSH src"
+    - Arguments: src (source)
+    - Description: Pushes src onto the stack.
+    - Opcode: 0x61
+
+* POP: "POP dst"
+    - Arguments: dst (destination)
+    - Description: Pops a value from the stack into dst.
+    - Opcode: 0x62
+
+============
+Shift and Rotate Instructions
+============
+
+* SHL: "SHL dst, count"
+    - Arguments: dst (destination), count (number of bits)
+    - Description: Shifts dst left by count bits, filling with zeros.
+    - Opcode: 0x80
+
+* SHR: "SHR dst, count"
+    - Arguments: dst (destination), count (number of bits)
+    - Description: Shifts dst right by count bits, filling with zeros.
+    - Opcode: 0x81
+
+* ROL: "ROL dst, count"
+    - Arguments: dst (destination), count (number of bits)
+    - Description: Rotates dst left by count bits.
+    - Opcode: 0x82
+
+* ROR: "ROR dst, count"
+    - Arguments: dst (destination), count (number of bits)
+    - Description: Rotates dst right by count bits.
+    - Opcode: 0x83
+
+============
+Misc. Instructions
+============
+
+* HLT: "HLT"
+	- Arguments: None
+	- Description: Stops program execution.
+	- Opcode: 0xFF
