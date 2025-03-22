@@ -5,3 +5,26 @@ Flags
 Flag can refer to one or more bits that are used to store a binary value or a Boolean variable for signaling special code conditions.
 
 In the case of the Pico86, flags store useful informations as booleans, where `0` is false and `1` is true, that can serve to store logical instruction results, such as `AND`/`OR`/`XOR`/etc.
+
+=============
+Flag list
+=============
+* OF: Overflow flag
+- Indicates if an arithmetic overflow has ocurred in an operation.
+* DF: Direction flag
+- Controls the left-to-right or right-to-left direction of string processing.
+* IF: Interrupt flag
+- Determines whether or not the (CPU) will respond immediately to maskable hardware interrupts.
+* TF: Trap flag
+- Permits operation of a processor in single-step mode
+* SF: Negative/Sign flag
+- Indicates whether the result of the last mathematical operation produced a value in which the most significant bit (the left most bit) was set.
+* ZF: Zero flag
+- Set to 1, or true, if an arithmetic result is zero, and reset otherwise.
+* AF: Half-carry flag
+- Indicates when a carry or borrow has been generated out of the least significant four bits of the accumulator register following the execution of an arithmetic instruction.
+* PF: Parity flag
+- Indicates if the numbers of set bits is odd or even in the result of the last operation.
+* CF: Carry flag
+- Indicate when an arithmetic carry or borrow has been generated.
+

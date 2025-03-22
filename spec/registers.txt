@@ -58,16 +58,16 @@ It is 16 bits wide, with one byte per flag.
 For detailed flag explanations, see "flags.txt".
 
 * **Bits 15-12**: None  
-* **Bit 11**: **OF** → Overflow flag  
-* **Bit 10**: **DF** → Direction flag  
-* **Bit 9**: **IF** → Interrupt flag  
-* **Bit 8**: **TF** → Trap flag  
-* **Bit 7**: **SF** → Negative/Sign flag  
-* **Bit 6**: **ZF** → Zero flag  
+* **Bit 11**: **OF**  
+* **Bit 10**: **DF**  
+* **Bit 9**: **IF**  
+* **Bit 8**: **TF**  
+* **Bit 7**: **SF**  
+* **Bit 6**: **ZF**  
 * **Bit 5**: None  
-* **Bit 4**: **AF** → Half-carry flag  
+* **Bit 4**: **AF**
 * **Bit 3**: None  
-* **Bit 2**: **PF** → Parity flag  
+* **Bit 2**: **PF**
 * **Bit 1**: None  
-* **Bit 0**: **CF** → Carry flag  
+* **Bit 0**: **CF**
 
